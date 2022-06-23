@@ -30,7 +30,7 @@ Stream {
  broadcast: Broadcast // информация о текущей трансляции; false, если оффлайн  
  hosting: Hosting // статус активного хоста; false, если оффлайн  
  last_online: string // время последней трансляции  
- stream_title: string // имя трансляции (снова) 
+ stream_title: string // имя трансляции (снова)  
  cqty: string // ????  
  premiums: int // Число платных подписчиков  
  followers: int // Число фолловеров  

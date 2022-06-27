@@ -1,12 +1,13 @@
-Запрос:  
+# Информация о пользователе  
+## Запрос:  
 GET /user/{id}  
 
-Ответ:
-{ ??? } 
+##Ответ:
+{ UserInfo } 
 
-Описание структур: 
+## Описание структур: 
 
-??? { 
+UserInfo { 
  admin :int // ???  
  user :User // объект пользователя  
  rights :string // Права пользователя  
@@ -49,4 +50,45 @@ Privacy {
  bio :int //  
  actions :int //  
  profile :int //  
+}
+
+# Информация о пользователе с короткой информацией о стриме  
+##Запрос:  
+GET /user/{id}/view  
+
+##Ответ:
+{ UserView } 
+
+##
+UserView { 
+ user :User // Объект пользователя  
+ stream : StreamView // Объекст стрима обрезанный
+}
+
+## Описание структур: 
+StreamView {
+ id: int // уникальный id стрима  
+ title: string // название стрима  
+ link: string // ссылка на стрим  
+ streamer: Streamer // структура  с описанием стримера  
+ avatar: string // ссылка на аватарку стримера  
+ hidden: string // стрим под галкой или нет  
+ game: GameView // игра стрима  
+ viewers: int // количество зрителей  
+ preview: string // ссылка на ОЧЕНЬ маленькую превьюшку  
+ poster: string // ссылка на превьюшку побольше  
+ premium: int // премиум ли стример; 0 - нет, 1 - да  
+ streamkey: string // id канала строкой  
+ channelKey: string // Имя канала строкой  
+ status : Boolean // Онлайн или оффлайн стрим  
+ favorite: ??? // приходит null  
+ source: Source // ссылки на m3u8 индексы разных качеств трансляций  
+}
+
+GameView {
+ id :string // id игры строкой  
+ poster :string // постер игры ссылка, скорее всего пусто  
+ poster3d :string // ???
+ title :string // название игры строкой
+ url :string // Видимо ссылка на игру так, как она записана (ключ)
 }

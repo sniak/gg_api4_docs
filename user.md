@@ -7,7 +7,7 @@ GET /user/{id}
 
 ## Описание структур: 
 
-UserInfo { 
+UserInfo {  
  admin :int // ???  
  user :User // объект пользователя  
  rights :string // Права пользователя  
@@ -16,7 +16,7 @@ UserInfo {
  phone :string // номер телефона  
 }
 
-User {
+User {  
  id : int // id пользователя  
  username :string // Имя пользователя  
  nickname :string // ник пользователя, отображается в чате, позволяет работать русским никам  
@@ -44,7 +44,7 @@ User {
 }
 
 
-Privacy {
+Privacy {  
  see_page :int //  
  priv_msg :int //  
  bio :int //  
@@ -57,16 +57,16 @@ Privacy {
 GET /user/{id}/view  
 
 ##Ответ:
-{ UserView } 
+{ UserView }  
 
 ##
-UserView { 
+UserView {  
  user :User // Объект пользователя  
  stream : StreamView // Объекст стрима обрезанный
 }
 
 ## Описание структур: 
-StreamView {
+StreamView {  
  id: int // уникальный id стрима  
  title: string // название стрима  
  link: string // ссылка на стрим  
@@ -85,7 +85,7 @@ StreamView {
  source: Source // ссылки на m3u8 индексы разных качеств трансляций  
 }
 
-GameView {
+GameView {  
  id :string // id игры строкой  
  poster :string // постер игры ссылка, скорее всего пусто  
  poster3d :string // ???

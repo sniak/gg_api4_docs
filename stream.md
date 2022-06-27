@@ -8,7 +8,7 @@ GET /stream/{id}
 
 ## Описание структур:
 
-Stream {
+Stream {  
  id: int // уникальный id стрима  
  title: string // название стрима  
  link: string // ссылка на стрим  
@@ -53,7 +53,7 @@ Broadcast {
   title: string // название трансляции  
 }
 
-Players {
+Players {  
   id: int // id плеера  
   title: string // название плеера  
   status: int // статус плеера (видимо онлайн/оффлайн)  

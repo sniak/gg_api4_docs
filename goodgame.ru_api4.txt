@@ -1,0 +1,60 @@
+Список методов, предоставленных stray.
+Используется для накопления описания.  
+
+https://goodgame.ru/api/4/
+https://goodgame.ru/api/4/index
+
+https://goodgame.ru/api/4/favorites/ (Избранное пользователя)
+POST https://goodgame.ru/api/4/favorites/subscribe
+{"obj_type":7,"obj":34490,"get_videos":0,"get_anons":0,"get_email":1}
+
+https://goodgame.ru/api/4/user/blacklist
+POST https://goodgame.ru/api/4/user/stream-to-blacklist
+{"id":1708}
+
+https://goodgame.ru/api/4/user/1
+https://goodgame.ru/api/4/user/1/view (+ инфа о стриме)
+
+https://goodgame.ru/api/4/stream
+https://goodgame.ru/api/4/stream/?ggonly=1&page=<page> (Список стримов только ГГ)
+https://goodgame.ru/api/4/stream/?ggonly=1&page=<page>&game=<game> (По игре)
+https://goodgame.ru/api/4/stream/?ggonly=1&page=<page>&genre=<genre> (По жанру)
+
+https://goodgame.ru/api/4/stream/phombie (Один канал)
+https://goodgame.ru/api/4/stream/Miker/
+https://goodgame.ru/api/4/stream/Miker/players
+
+https://goodgame.ru/api/4/stream/games/ (игры)
+https://goodgame.ru/api/4/stream/games?page=1
+https://goodgame.ru/api/4/stream/genres/ (жанры)
+
+https://goodgame.ru/api/4/forum/
+https://goodgame.ru/api/4/news
+https://goodgame.ru/api/4/games
+
+https://goodgame.ru/api/4/chat/ignore_list
+
+поиск
+https://goodgame.ru/api/4/search/?section=channels&query=miker
+https://goodgame.ru/api/4/search/?section=channels&query=Warhammer
+
+https://goodgame.ru/api/4/help
+https://goodgame.ru/api/4/help/2/15
+
+https://goodgame.ru/api/4/forum/28?page=1
+https://goodgame.ru/api/4/topic/54678
+https://goodgame.ru/api/4/comments?objId=54678&objType=11
+
+POST https://goodgame.ru/api/4/combinedRequest
+[{"url":"https://goodgame.ru/api/4/topic/111792","params":"","header":{"Accept":["application/json"]}},{"url":"https://goodgame.ru/api/4/comments?objId=111792&objType=11","params":"?objId=111792&objType=11","header":{"Accept":["application/json"]}}]
+
+https://goodgame.ru/api/4/stream/selector?tab=popular&page=2&onPage=12
+https://goodgame.ru/api/4/stream/selector?tab=cup&page=1
+https://goodgame.ru/api/4/stream/selector?tab=world-of-warcraft&page=2&onPage=12
+
+POST https://goodgame.ru/api/4/login
+{"login":"name123","password":"pass456","remember":1}
+
+окно чата с авторизацией
+https://goodgame.ru/chat/lokki7/?userid=<id>&token=<token>
+где "id" и "token" - соответствующие поля из https://goodgame.ru/api/4/user/
